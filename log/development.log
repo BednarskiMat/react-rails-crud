@@ -689,3 +689,393 @@ No template found for Api::V1::FruitsController#destroy, rendering head :no_cont
 Completed 204 No Content in 132ms (ActiveRecord: 1.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-08-06 20:30:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1822ms (Views: 1817.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-06 20:30:04 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.5ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 19ms (Views: 13.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-06 20:36:02 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 951ms (Views: 948.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-06 20:36:03 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 36ms (Views: 24.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:33:09 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 3829ms (Views: 3797.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:33:14 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.5ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 38ms (Views: 29.3ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/api/v1/fruits/1" for 127.0.0.1 at 2018-08-07 09:33:42 -0400
+Processing by Api::V1::FruitsController#update as */*
+  Parameters: {"fruit"=>{"id"=>1, "name"=>"Mango1", "description"=>"I am delicious Mango"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mFruit Load (1.8ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/fruits_controller.rb:17
+Completed 404 Not Found in 37ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Fruit with 'id'={"fruit"=>{"id"=>1, "name"=>"Mango1", "description"=>"I am delicious Mango"}, "controller"=>"api/v1/fruits", "action"=>"update", "id"=>"1"}):
+  
+app/controllers/api/v1/fruits_controller.rb:17:in `update'
+Started PUT "/api/v1/fruits/1" for 127.0.0.1 at 2018-08-07 09:34:23 -0400
+Processing by Api::V1::FruitsController#update as */*
+  Parameters: {"fruit"=>{"id"=>1, "name"=>"Mango12", "description"=>"I am delicious Mango"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/fruits_controller.rb:17
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Fruit with 'id'={"fruit"=>{"id"=>1, "name"=>"Mango12", "description"=>"I am delicious Mango"}, "controller"=>"api/v1/fruits", "action"=>"update", "id"=>"1"}):
+  
+app/controllers/api/v1/fruits_controller.rb:17:in `update'
+Started GET "/api/v1/fruits" for 127.0.0.1 at 2018-08-07 09:34:36 -0400
+Processing by Api::V1::FruitsController#index as HTML
+  [1m[36mFruit Load (0.3ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/v1/fruits" for 127.0.0.1 at 2018-08-07 09:34:41 -0400
+Processing by Api::V1::FruitsController#index as HTML
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:34:46 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 82ms (Views: 77.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:34:47 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started PUT "/api/v1/fruits/1" for 127.0.0.1 at 2018-08-07 09:34:59 -0400
+Processing by Api::V1::FruitsController#update as */*
+  Parameters: {"fruit"=>{"id"=>1, "name"=>"Mango", "description"=>"I am delicious Mangox"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/fruits_controller.rb:17
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Fruit with 'id'={"fruit"=>{"id"=>1, "name"=>"Mango", "description"=>"I am delicious Mangox"}, "controller"=>"api/v1/fruits", "action"=>"update", "id"=>"1"}):
+  
+app/controllers/api/v1/fruits_controller.rb:17:in `update'
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:45:21 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1801ms (Views: 1796.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:45:23 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.6ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 29ms (Views: 22.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:46:38 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 991ms (Views: 988.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:46:39 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.5ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 16ms (Views: 7.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:46:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 1018ms (Views: 1014.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:46:59 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:47:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 971ms (Views: 969.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:47:42 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:47:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 882ms (Views: 879.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:47:59 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 18ms (Views: 14.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:50:53 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 999ms (Views: 997.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:50:55 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.3ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 71ms (Views: 67.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:50:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 157ms (Views: 151.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:50:58 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:51:00 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 105ms (Views: 102.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:51:01 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:51:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:51:03 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.3ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:51:19 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:51:19 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:51:20 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:51:20 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.4ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:51:21 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:51:21 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.3ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:51:41 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 982ms (Views: 979.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:51:42 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:52:22 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 966ms (Views: 963.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:52:23 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:53:47 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 886ms (Views: 883.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:53:48 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:53:58 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 870ms (Views: 867.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:53:59 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/api/v1/fruits/1" for 127.0.0.1 at 2018-08-07 09:54:12 -0400
+Processing by Api::V1::FruitsController#update as */*
+  Parameters: {"fruit"=>{"id"=>1, "name"=>"Mango", "description"=>"I am delicious Mango"}, "id"=>"1"}
+Can't verify CSRF token authenticity.
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/fruits_controller.rb:17
+Completed 404 Not Found in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Fruit with 'id'={"fruit"=>{"id"=>1, "name"=>"Mango", "description"=>"I am delicious Mango"}, "controller"=>"api/v1/fruits", "action"=>"update", "id"=>"1"}):
+  
+app/controllers/api/v1/fruits_controller.rb:17:in `update'
+Started DELETE "/api/v1/fruits/1" for 127.0.0.1 at 2018-08-07 09:54:19 -0400
+Processing by Api::V1::FruitsController#destroy as */*
+  Parameters: {"id"=>"1", "fruit"=>{}}
+Can't verify CSRF token authenticity.
+  [1m[36mFruit Load (0.1ms)[0m  [1m[34mSELECT  "fruits".* FROM "fruits" WHERE "fruits"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/fruits_controller.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:13
+  [1m[36mFruit Destroy (0.3ms)[0m  [1m[31mDELETE FROM "fruits" WHERE "fruits"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/fruits_controller.rb:13
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:13
+No template found for Api::V1::FruitsController#destroy, rendering head :no_content
+Completed 204 No Content in 124ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:55:49 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 873ms (Views: 870.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:55:50 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-07 09:56:14 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/fruits.json" for 127.0.0.1 at 2018-08-07 09:56:15 -0400
+Processing by Api::V1::FruitsController#index as JSON
+  [1m[36mFruit Load (0.2ms)[0m  [1m[34mSELECT "fruits".* FROM "fruits"[0m
+  ↳ app/controllers/api/v1/fruits_controller.rb:4
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+

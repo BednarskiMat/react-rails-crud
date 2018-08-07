@@ -3,14 +3,20 @@ const AllFruits = (props) =>
     let fruits = props.fruits.map((fruit)=>{
         return(
             <div key={fruit.id}>
-                <Fruit fruit={fruit} handleDelete = {props.handleDelete}/>
+                <Fruit fruit={fruit} handleDelete = {props.handleDelete} handleUpdate = {props.handleUpdate}/>
             </div>
         )
     })
 
     return(
-        <div>
-            {fruits}
+        <div className="row">
+           
+                {fruits}
+            
+           
         </div>
     )
 }
+
+
+        
